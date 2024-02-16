@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  perspective: 1000px;
+  background: #def;
+  background: radial-gradient(closest-side, #def 20%, #ace)
+}
+
+div {
+  --time: 0.2s;
+  --timing: ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50vmin;
+  height: 5vmin;
+  transition: transform var(--time) var(--timing), box-shadow var(--time) var(--timing);
+  background: 
+    repeating-linear-gradient(45deg, #222 0 12%, white 0 22%) 100% 0% / 80% 100%
+    ;
+  background-color: #222;
+  background-repeat: no-repeat;
+  transform:
+    translate(-50%, -15vmin)
+    rotate3d(0, 1, 0, -35deg)
+    rotate(-5deg)
+    ;
+  transform-style: preserve-3d;
+  box-shadow: 
+    0.2vmin 0.1vmin #777,
+    0.4vmin 0.2vmin #777,
+    0.6vmin 0.3vmin #777,
+    0.8vmin 0.4vmin #777,
+    1.0vmin 0.5vmin #777,
+    1.2vmin 0.6vmin #777,
+    1.4vmin 0.7vmin #777,
+    1.6vmin 0.8vmin #777;
+}
+
+div::before {
+  content: "        ROLL               SCENE               TAKE \0A \0A \0A \0A  DATE \0A \0A  DIRECTOR : @CODEV_KN \0A \0A  CAMERA";
+  display: block;
+  position: absolute;
+  top: calc(100% + 0.6vmin);
+  left: 0vmin;
+  width: 100%;
+  height: 31vmin;
+  box-sizing:  border-box;
+  padding-top: 6.5vmin;
+  padding-left: 2vmin;
+  font-family: Arial, sans-serif;
+  font-size: 2.25vmin;
+  white-space: pre;
+  color: white;
+  transform: rotate(10deg);
+  transform-origin: top left;
+  transition: transform var(--time) var(--timing), box-shadow var(--time) var(--timing);
+  background:
+    repeating-linear-gradient(135deg, #222 0 12%, white 0 22%) 100% 0% / 80% 5vmin,
+    linear-gradient(#222, #222) 100% 0% / 100% 5vmin,
+    repeating-linear-gradient(white 0 2%, transparent 0 40%) 50% 85% / 90% 40%
+    ,
+    repeating-linear-gradient(to right, transparent 0 34%, white 0 34.5%, transparent 0 35%) 50% 25% / 90% 35%
+    ;
+  background-repeat: no-repeat;
+  background-color: #333;
+  box-shadow: 
+    0.2vmin -0.1vmin #777,
+    0.4vmin -0.2vmin #777,
+    0.6vmin -0.3vmin #777,
+    0.8vmin -0.4vmin #777,
+    1.0vmin -0.5vmin #777,
+    1.2vmin -0.6vmin #777,
+    1.4vmin -0.7vmin #777,
+    1.6vmin -0.8vmin #777;
+}
+
+div::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -0.6vmin;
+  left: -0.6vmin;
+  width: 11vmin;
+  height: 12vmin;
+  transition: transform var(--time) var(--timing);
+  clip-path: 
+    polygon(0% 30%, 20% 0%, 50% 0%, 100% 40%, 100% 100%, 0% 100%);
+  background:
+    radial-gradient(closest-side, darkgray 90%, transparent 0) 25% 1.5vmin / 4vmin 4vmin,
+    radial-gradient(closest-side, darkgray 90%, transparent 0) 10% 7vmin / 4vmin 4vmin,
+    radial-gradient(closest-side, darkgray 90%, transparent 0) 90% 7vmin / 4vmin 4vmin;
+  background-repeat: no-repeat;
+  background-color: #000;
+  transform: translate3d(0, 0, 0.1vmin) rotate(10deg);
+  transform-origin: 10% 8vmin;
+}
+
+/* hover state */
+div:hover {
+  transform: translate(-50%, -15vmin)  rotate3d(0, 1, 0, -15deg) rotate(0deg);
+  box-shadow: 
+    0.2vmin 0.1vmin #777,
+    0.4vmin 0.2vmin #777,
+    0.6vmin 0.3vmin #777,
+    0.8vmin 0.4vmin #777,
+    0.8vmin 0.4vmin #777,
+    0.8vmin 0.4vmin #777,
+    0.8vmin 0.4vmin #777,
+    0.8vmin 0.4vmin #777;
+}
+
+div:hover::before {
+  transform: rotate(0deg);
+  box-shadow: 
+    0.2vmin -0.1vmin #777,
+    0.4vmin -0.2vmin #777,
+    0.6vmin -0.3vmin #777,
+    0.8vmin -0.4vmin #777,
+    0.8vmin -0.4vmin #777,
+    0.8vmin -0.4vmin #777,
+    0.8vmin -0.4vmin #777,
+    0.8vmin -0.4vmin #777;
+}
+
+div:hover::after{
+  transform:  translate3d(0, 0, 0.1vmin) rotate(0deg);
+}

@@ -4,7 +4,7 @@ Welcome to the Cinema Clap repository! This project is a simple cinema clap crea
 
 ## Demo
 
-![Divtober Demo](https://github.com/codevkn/divtober_html_css/blob/master/divtober_demo.gif).
+![CinemaClap Demo](https://github.com/codevkn/cinemaClap_html_css/blob/master/cinemaClap_demo.gif)
 
 ## Description
 
